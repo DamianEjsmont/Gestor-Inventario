@@ -1,0 +1,20 @@
+
+Gestor de tienda de videojuegos.
+
+
+
+
+
+El trabajo esta sin terminar aun, falta agregar algunas cosas como calcular la cantidad * el precio, y a su vez restarle la cantidad de productos vendido al stock.
+
+
+para inicializar el programa se necesita:
+
+
+
+Xampp -> phpmyadmin
+
+
+se uso la version de NetBeans 11.1
+
+
