@@ -56,6 +56,7 @@ public class Proveedor extends javax.swing.JInternalFrame {
         botonModificar = new javax.swing.JButton();
         botonAgregar = new javax.swing.JButton();
         botonNuevo = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaDatos = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
@@ -106,17 +107,26 @@ public class Proveedor extends javax.swing.JInternalFrame {
             }
         });
 
+        botonEliminar.setText("ELIMINAR");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(23, 23, 23)
                 .addComponent(botonAgregar)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
                 .addComponent(botonModificar)
-                .addGap(48, 48, 48)
+                .addGap(35, 35, 35)
                 .addComponent(botonNuevo)
+                .addGap(18, 18, 18)
+                .addComponent(botonEliminar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -126,7 +136,8 @@ public class Proveedor extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificar)
                     .addComponent(botonAgregar)
-                    .addComponent(botonNuevo))
+                    .addComponent(botonNuevo)
+                    .addComponent(botonEliminar))
                 .addContainerGap())
         );
 
@@ -286,6 +297,12 @@ public class Proveedor extends javax.swing.JInternalFrame {
     private void botonNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoActionPerformed
         nuevo();
     }//GEN-LAST:event_botonNuevoActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        eliminar();
+        listar();
+        nuevo();
+    }//GEN-LAST:event_botonEliminarActionPerformed
 
     
      void modificar(){
@@ -458,6 +475,7 @@ public class Proveedor extends javax.swing.JInternalFrame {
                 } catch (HeadlessException | SQLException e) {
                     
                     System.err.print("Error:"+e);
+                    JOptionPane.showMessageDialog(null,"no se puede borrar al proveedor porque esta relacionado con un producto, vaya a inventario y cambie el id o dejelo vacio al campo proveedor");
                 }
                
         }
@@ -485,6 +503,7 @@ txtnom.requestFocus();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TablaDatos;
     private javax.swing.JButton botonAgregar;
+    private javax.swing.JButton botonEliminar;
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonNuevo;
     private javax.swing.JButton jButton1;

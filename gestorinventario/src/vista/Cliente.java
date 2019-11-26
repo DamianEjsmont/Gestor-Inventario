@@ -55,6 +55,7 @@ public class Cliente extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         botonAgregar = new javax.swing.JButton();
         botonNuevo = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaDatos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -95,23 +96,33 @@ public class Cliente extends javax.swing.JInternalFrame {
             }
         });
 
+        botonEliminar.setText("ELIMINAR");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(158, 158, 158)
+                .addGap(74, 74, 74)
                 .addComponent(botonAgregar)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(botonNuevo)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addComponent(botonEliminar)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonAgregar)
-                    .addComponent(botonNuevo))
+                    .addComponent(botonNuevo)
+                    .addComponent(botonEliminar))
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
@@ -204,7 +215,7 @@ public class Cliente extends javax.swing.JInternalFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -247,6 +258,12 @@ public class Cliente extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        eliminar();
+        listar();
+        nuevo();
+    }//GEN-LAST:event_botonEliminarActionPerformed
 
     
     
@@ -427,6 +444,7 @@ txtnom.requestFocus();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TablaDatos;
     private javax.swing.JButton botonAgregar;
+    private javax.swing.JButton botonEliminar;
     private javax.swing.JButton botonNuevo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
