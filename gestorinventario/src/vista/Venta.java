@@ -539,7 +539,7 @@ public class Venta extends javax.swing.JInternalFrame {
             cn=con.getConnection();
             st=cn.createStatement();
             st.executeUpdate(sql);
-            JOptionPane.showInternalMessageDialog(null,"Registrado");
+            JOptionPane.showMessageDialog(null,"Registrado");
             
             
             } catch (SQLException e){
@@ -580,7 +580,7 @@ public class Venta extends javax.swing.JInternalFrame {
             cn=con.getConnection();
             st=cn.createStatement();
             st.executeUpdate(sql);
-            JOptionPane.showInternalMessageDialog(null,"Registrado");
+            JOptionPane.showMessageDialog(null,"Registrado");
             
             
             } catch (SQLException e){

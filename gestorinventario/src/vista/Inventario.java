@@ -467,7 +467,7 @@ public class Inventario extends javax.swing.JInternalFrame {
             cn=con.getConnection();
             st=cn.createStatement();
             st.executeUpdate(sql);
-            JOptionPane.showInternalMessageDialog(null,"Producto agregado");
+            JOptionPane.showMessageDialog(null,"Producto agregado");
             limpiartabla(model);
             
             } catch (SQLException e){

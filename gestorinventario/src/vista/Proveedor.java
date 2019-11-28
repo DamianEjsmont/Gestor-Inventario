@@ -416,7 +416,7 @@ public class Proveedor extends javax.swing.JInternalFrame {
             cn=con.getConnection();
             st=cn.createStatement();
             st.executeUpdate(sql);
-            JOptionPane.showInternalMessageDialog(null,"Proveedor agregado");
+            JOptionPane.showMessageDialog(null,"Proveedor agregado");
             limpiartabla(model);
             
             } catch (SQLException e){

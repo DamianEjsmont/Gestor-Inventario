@@ -2,7 +2,10 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ */ 
+/*
+ *Se modifico los JOptionPane.showInternalMessageDialog a JOptionPane.showMessageDialog porque daba problemas con las versiones
+*/
 package vista;
 
 import config.Conexion;
@@ -355,7 +358,7 @@ public class Cliente extends javax.swing.JInternalFrame {
             cn=con.getConnection();
             st=cn.createStatement();
             st.executeUpdate(sql);
-            JOptionPane.showInternalMessageDialog(null,"cliente agregado");
+            JOptionPane.showMessageDialog(null,"cliente agregado");
             limpiartabla(model);
             
             } catch (SQLException e){
