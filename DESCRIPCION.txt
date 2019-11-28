@@ -1,0 +1,27 @@
+<-----------------------------------------------------------DESCRIPCIÓN-------------------------------------------------------------------------------------------------->
+	El programa se diseñó para registrar productos (en este caso son juegos) en una base de datos y cargarlos en el interfáz el stock, clientes, proveedores e 
+información de las ventas. Se utilizó Java con Swing (creación de interfaz en Java), MySQL(creación de la BD) y mysql-connector-java-5.1.48 (conexión de la BD con Java).
+Al iniciar el programa encontraremos iniciará un interfáz principal, el cual contiene submenús en la parte superior derecha. Se recomienda no abrir más de una 
+simultáneamente, ya que esto los hará más lentos.
+
+-Clientes: contiene un formulario con cinco labels para completar con nombre, apellido, documento y correo. El ID se asigna automáticamente.
+En la parte intermedia contiene un panel de opciones con "Agregar", "Nuevo" y "Eliminar".
+	-Agregar: Luego de llenar el formulario el cliente queda registrado en la parte inferior del menú.
+	-Nuevo: Acción que limpia los labels.
+	-Eliminar: Elimina un cliente ya registrado.
+Por último en la parte inferior se muestra una tabla con los Clientes ya registrados.
+
+-Ventas: Contiene un formulario con el "Número de la factura", "ID Cliente", "Nombre Cliente", "Nombre Empleado" y "Fecha", al completar estos campos se registra la factura y
+se muestra en la parte media del menú en forma de tabla. En esta queda registradados los datos de la venta (ID, NOMBRE, PRECIO, PLATAFORMA, STOCK, GÉNERO) del artículo.
+
+-Proveedores: Casi la misma estructura que el menú de Clientes, con la diferencia de que este contiene en la parte inferior un formulario, un panel de 
+opciones con la elección de modificar algún dato si es necesario.
+
+-Inventario: Tiene un formulario con un "ID" (AI), "Nombre" del producto, "Precio", "Plataforma" (PC, XBOX, ETC.), "STOCK", "GÉNERO" (acción, aventura, etc),
+"Proveedor" (número de proveedores).
+
+IDE: NetBeans v11.1.
+Lenguaje de Programación: JAVA con SWING.
+	-Librerías: mysql-connector-java-5.1.48-bin.jar.
+		    jdk12(default).
+BASE DE DATOS: MySQL.
